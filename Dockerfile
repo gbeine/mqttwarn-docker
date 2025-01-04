@@ -27,9 +27,7 @@ RUN groupadd -r mqttwarn && useradd -r -g mqttwarn mqttwarn
 RUN chown -R mqttwarn:mqttwarn /etc/mqttwarn
 
 # Install package.
-COPY mqttwarn/ /src/
-COPY .git/modules/mqttwarn/ /src/.git/
-RUN sed -i '/.*worktree = ..\/..\/..\/mqttwarn/d' /src/.git/config
+RUN git clone -b topic_timeout https://c0d3.sh/smarthome/mqttwarn.git /src
 RUN \
     true \
     && pip install --upgrade pip \
