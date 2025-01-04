@@ -1,0 +1,11 @@
+*
+!mqttwarn/.git
+!mqttwarn/etc
+!mqttwarn/mqttwarn
+!mqttwarn/tests
+!mqttwarn/pyproject.toml
+!mqttwarn/setup.py
+!mqttwarn/MANIFEST.in
+!mqttwarn/*.ini
+!mqttwarn/*.md
+!mqttwarn/*.rst

@@ -27,7 +27,7 @@ RUN groupadd -r mqttwarn && useradd -r -g mqttwarn mqttwarn
 RUN chown -R mqttwarn:mqttwarn /etc/mqttwarn
 
 # Install package.
-COPY mqttwarn /src
+COPY mqttwarn/ /src/
 RUN \
     true \
     && pip install --upgrade pip \
