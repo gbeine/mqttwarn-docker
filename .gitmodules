@@ -1,0 +1,4 @@
+[submodule "mqttwarn"]
+	path = mqttwarn
+	url = git@c0d3.sh:smarthome/mqttwarn.git
+	branch = topic_timeout
