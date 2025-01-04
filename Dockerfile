@@ -28,6 +28,8 @@ RUN chown -R mqttwarn:mqttwarn /etc/mqttwarn
 
 # Install package.
 COPY mqttwarn/ /src/
+COPY .git/modules/mqttwarn/ /src/.git/
+RUN sed -i '/.*worktree = ..\/..\/..\/mqttwarn/d' /src/.git/config
 RUN \
     true \
     && pip install --upgrade pip \
