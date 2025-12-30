@@ -10,11 +10,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Checkout
-        uses: actions/checkout@v6
-        with:
-            repository: 'https://c0d3.sh/smarthome/mqttwarn.git'
-            ref: 'topic_timeout'
+      - name: Checkout mqttwarn
+        run: git clone -b topic_timeout https://c0d3.sh/smarthome/mqttwarn.git
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
