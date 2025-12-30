@@ -29,7 +29,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ./mqttwarn
-          file: Dockerfile.full
+          file: ./mqttwarn/Dockerfile.full
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           push: true
           tags: c0d3.sh/container/mqttwarn-docker:latest
