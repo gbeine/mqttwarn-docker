@@ -8,9 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
+
+      - name: Checkout
+        uses: actions/checkout@v6
         with:
-            submodules: recursive
+            repository: 'https://c0d3.sh/smarthome/mqttwarn.git'
+            ref: 'topic_timeout'
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
